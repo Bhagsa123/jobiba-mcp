@@ -1,0 +1,19 @@
+{
+  "schema_version": "v1",
+  "name_for_model": "jobiba_career",
+  "name_for_human": "Jobiba Career",
+  "description_for_model": "Jobiba is an AI-first jobs and career platform. Search jobs and, after OAuth consent, use AI to manage the candidate profile, build and tailor resumes, prepare applications, track applications, analyze skill gaps, generate cover letters, prepare interviews and use employer workflows.",
+  "description_for_human": "Use AI to search, prepare, apply, learn, track and advance your Jobiba career; employers can also manage hiring workflows.",
+  "auth": {
+    "type": "oauth",
+    "instructions": "Use the Jobiba OAuth authorization-code flow with PKCE. Discovery metadata is served by the Jobiba authorization server."
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://jobiba.com/openapi/jobiba-chatgpt.yaml",
+    "is_user_authenticated": true
+  },
+  "logo_url": "https://jobiba.com/brand/jobiba-mark-512.png",
+  "contact_email": "info@jobiba.com",
+  "legal_info_url": "https://jobiba.com/terms"
+}

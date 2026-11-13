@@ -1,0 +1,82 @@
+openapi: 3.1.0
+info:
+  title: Jobiba Career API
+  version: 0.1.0
+  description: |
+    Compatibility REST surface for the legacy plugin manifest.
+    The universal AI integration is the remote MCP server at
+    https://jobiba.com/mcp. The legacy REST endpoints remain for compatibility.
+servers:
+  - url: https://jobiba.com/api/chatgpt/v1
+paths:
+  /jobs:
+    get:
+      operationId: searchJobs
+      summary: Search Jobiba jobs
+      description: Public Jobiba job search. For profile, applications, resumes, employer posting and career AI use the MCP server.
+      parameters:
+        - in: query
+          name: q
+          schema: { type: string, maxLength: 160 }
+        - in: query
+          name: location
+          schema: { type: string, maxLength: 160 }
+        - in: query
+          name: jobType
+          schema: { type: string, maxLength: 50 }
+        - in: query
+          name: remoteType
+          schema: { type: string, maxLength: 50 }
+        - in: query
+          name: limit
+          schema: { type: integer, minimum: 1, maximum: 20, default: 10 }
+      responses:
+        "200":
+          description: Matching active Jobiba jobs
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/JobSearchResponse"
+  /jobs/{slug}:
+    get:
+      operationId: getJob
+      summary: Get a Jobiba job
+      parameters:
+        - in: path
+          name: slug
+          required: true
+          schema: { type: string }
+      responses:
+        "200":
+          description: Job details
+components:
+  schemas:
+    Job:
+      type: object
+      required: [id, slug, title, url]
+      properties:
+        id: { type: string }
+        slug: { type: string }
+        title: { type: string }
+        company: { type: string, nullable: true }
+        location: { type: string, nullable: true }
+        jobType: { type: string, nullable: true }
+        remoteType: { type: string, nullable: true }
+        salaryMin: { type: number, nullable: true }
+        salaryMax: { type: number, nullable: true }
+        salaryCurrency: { type: string, nullable: true }
+        skills:
+          type: array
+          items: { type: string }
+        url: { type: string, format: uri }
+        applyUrl: { type: string, format: uri }
+        postedAt: { type: string, format: date-time, nullable: true }
+    JobSearchResponse:
+      type: object
+      properties:
+        jobs:
+          type: array
+          items: { $ref: "#/components/schemas/Job" }
+        total: { type: integer }
+        totalExact: { type: boolean }
+        hasMore: { type: boolean }

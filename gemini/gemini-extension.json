@@ -1,0 +1,11 @@
+{
+  "name": "jobiba-career",
+  "version": "0.5.0",
+  "description": "Find jobs, research salaries, tailor your CV to each job, apply with confirmation, prepare interviews and track applications; employers can post jobs, screen applicants, shortlist and contact candidates, all inside Claude. Powered by live Jobiba data.",
+  "mcpServers": {
+    "jobiba": {
+      "httpUrl": "https://jobiba.com/mcp"
+    }
+  },
+  "contextFileName": "GEMINI.md"
+}

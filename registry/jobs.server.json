@@ -1,0 +1,27 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.jobiba/jobs",
+  "title": "Jobiba Jobs: Job Search, Salary, CV & Apply",
+  "description": "Search live jobs worldwide, check salaries, tailor your CV and apply with your OK.",
+  "version": "1.0.0",
+  "websiteUrl": "https://jobiba.com/developers",
+  "repository": {
+    "url": "https://github.com/Bhagsa123/jobiba-mcp",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://jobiba.com/brand/jobiba-mark-512.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://jobiba.com/mcp/jobs"
+    }
+  ]
+}

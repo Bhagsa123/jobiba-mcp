@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "jobiba": {
+      "type": "http",
+      "url": "https://jobiba.com/mcp"
+    }
+  }
+}

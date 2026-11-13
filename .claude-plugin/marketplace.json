@@ -1,0 +1,61 @@
+{
+  "name": "jobiba",
+  "description": "Jobiba career and hiring plugins for Claude: job search, tailored CVs, salary research, interview prep, applicant screening and talent sourcing.",
+  "owner": {
+    "name": "Jobiba",
+    "url": "https://jobiba.com"
+  },
+  "plugins": [
+    {
+      "name": "jobiba-career",
+      "source": "./",
+      "description": "Find jobs, research salaries, tailor your CV to each job, apply with confirmation, prepare interviews and track applications; employers can post jobs, screen applicants, shortlist and contact candidates, all inside Claude. Powered by live Jobiba data.",
+      "version": "0.5.0",
+      "category": "productivity",
+      "tags": [
+        "jobs",
+        "job search",
+        "job board",
+        "find jobs",
+        "remote jobs",
+        "resume",
+        "cv",
+        "resume tailoring",
+        "ats",
+        "ats resume",
+        "cover letter",
+        "interview prep"
+      ],
+      "keywords": [
+        "jobs",
+        "job search",
+        "job board",
+        "find jobs",
+        "remote jobs",
+        "resume",
+        "cv",
+        "resume tailoring",
+        "ats",
+        "ats resume",
+        "cover letter",
+        "interview prep",
+        "mock interview",
+        "salary",
+        "salary research",
+        "offer negotiation",
+        "career",
+        "career path",
+        "recruiting",
+        "hiring",
+        "applicant tracking",
+        "talent sourcing",
+        "candidate shortlist",
+        "job posting",
+        "employer",
+        "india jobs",
+        "jobiba"
+      ],
+      "homepage": "https://jobiba.com/developers"
+    }
+  ]
+}
