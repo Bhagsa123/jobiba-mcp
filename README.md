@@ -35,7 +35,7 @@ Or the connector only: `claude mcp add --transport http jobiba https://jobiba.co
 { "mcpServers": { "jobiba": { "url": "https://jobiba.com/mcp/jobs" } } }
 ```
 
-**Gemini CLI:** `gemini mcp add --transport http jobiba https://jobiba.com/mcp`, or install the extension in [`gemini/`](gemini/).
+**Gemini CLI:** `gemini extensions install https://github.com/Bhagsa123/jobiba-mcp`, or the connector only: `gemini mcp add --transport http jobiba https://jobiba.com/mcp`.
 
 **Codex:** copy [`chatgpt-codex/`](chatgpt-codex/) into your plugins directory.
 
@@ -60,7 +60,8 @@ Or the connector only: `claude mcp add --transport http jobiba https://jobiba.co
 |---|---|
 | `.claude-plugin/`, `commands/`, `skills/`, `.mcp.json` | Claude Code plugin and marketplace |
 | `chatgpt-codex/` | Codex plugin, ChatGPT app manifest, Custom GPT kit |
-| `gemini/` | Gemini CLI extension |
+| `gemini-extension.json`, `GEMINI.md` (also in `gemini/`) | Gemini CLI extension |
+| `llms-install.md`, `logo.png` | Install guide for agents (Cline), 400 px logo |
 | `registry/` | Official MCP Registry entries (`com.jobiba/jobs`, `com.jobiba/hiring`) |
 
 These packages contain only text files and a remote server address. They run no scripts or hooks.
